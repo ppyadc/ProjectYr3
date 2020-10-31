@@ -1,4 +1,4 @@
-function threshold_no_gal = find_threshold(no_gal, no_std)
+function [threshold_no_gal, mean_no_gal, sigma] = find_threshold(no_gal, no_std)
 
 %calculate mean number of galaxy in each section of the cell
 mean_no_gal = mean(no_gal, 'all');
