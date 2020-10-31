@@ -1,4 +1,4 @@
-function plotting(grid_lengthx, grid_lengthy, nx, ny, no_gal)
+function plotting(grid_lengthx, grid_lengthy, nx, ny, no_gal, likelihood_matrix)
 %function to produce a plot of the number of galaxies in each section of
 %the grid displayed as different colours
 
@@ -21,5 +21,11 @@ colormap winter;
 set(gca, 'xtick', linspace(0, grid_lengthx, nx + 1));
 set(gca, 'ytick', linspace(0, grid_lengthy, ny + 1));
 grid on
+
+
+%plot likelihood matrix
+figure;
+imagesc(x, y, likelihood_matrix);
+colorbar;
 
 end
