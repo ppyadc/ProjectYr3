@@ -1,11 +1,16 @@
-z = 0.1:0.05:8;
-Da = zeros(1, length(z));
-theta = zeros(1, length(z));
+z = 0.1:0.05:8; %redshift
+Da = zeros(1, length(z)); %angular diameter distance
+theta = zeros(1, length(z)); %angular size
+omega_M = 1;
+omega_lambda = 0;
+physical_distance = 1; %Mpc
 
+%applying calculate_dist for a range of z
 for i = 1:length(z)
-    [Da(i), theta(i)] = calculate_dist(z(i), 1, 0, 1);
+    [Da(i), theta(i)] = calculate_dist(z(i), omega_M, omega_lambda, physical_distance);
 end
 
+%creating plots
 plot(z, Da, '-k');
 title('Angular diameter distance  as a function of redshift');
 xlabel('z');
