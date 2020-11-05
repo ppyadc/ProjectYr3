@@ -3,6 +3,6 @@ function likelihood_matrix = likelihood(no_gal, mean_no_gal, sigma)
 %cluster
 
 %use gaussian distribution to calculate teh probabilities
-likelihood_matrix = normcdf(no_gal, mean_no_gal, sigma);
+likelihood_matrix = (no_gal - mean_no_gal)./sigma;
 
 end

@@ -2,7 +2,7 @@ function [Da, theta] = calculate_dist(redshift, omega_M, omega_lambda, physical_
 %calculate angular diameter distance from redshift
 
 %calculate Hubble distance from Hubble's constant and the speed of light
-H0 = 70.*(10.^3);
+H0 = 67.27.*(10.^3);
 c = 3.*(10.^8);
 Dh = c./H0;
 
