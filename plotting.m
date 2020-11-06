@@ -24,8 +24,9 @@ figure;
 imagesc(x_arr, y_arr, likelihood_matrix);
 colorbar;
 
+%plot where galaxy clusters are
 figure;
-imagesc(x_arr, y_arr, cluster_matrix);
+imagesc(x_arr, y_arr,cluster_matrix);
 colorbar;
 
 end
