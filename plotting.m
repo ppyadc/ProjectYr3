@@ -17,15 +17,21 @@ imagesc(x_arr, y_arr, no_gal); hold on;
 plot(x, y, 'rx');
 colorbar;
 colormap winter;
-
+xlabel('RA');
+ylabel('DEC');
 
 %plot likelihood matrix
 figure;
 imagesc(x_arr, y_arr, likelihood_matrix);
 colorbar;
+xlabel('RA');
+ylabel('DEC');
 
+%plot where galaxy clusters are
 figure;
-imagesc(x_arr, y_arr, cluster_matrix);
+imagesc(x_arr, y_arr,cluster_matrix);
 colorbar;
+xlabel('RA');
+ylabel('DEC');
 
 end

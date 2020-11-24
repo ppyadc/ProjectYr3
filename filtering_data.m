@@ -1,0 +1,11 @@
+clc;
+indx_ra = (data_mat(:,2) > 65) & (data_mat(:, 2) < 75);
+filter_data = data_mat(indx_ra, :);
+indx_dec = (filter_data(:,3) > -60) & (filter_data(:, 3) < -46);
+filter_data = filter_data(indx_dec, :);
+indx_type = (filter_data(:, 4) == 1);
+filter_data = filter_data(indx_type, :);
+indx_mag = (filter_data(:, 8) < 23.9);
+filter_data = filter_data(indx_mag, :);
+indx_bad = (filter_data(:, 7) == 0);
+filter_data = filter_data(indx_bad, :);
