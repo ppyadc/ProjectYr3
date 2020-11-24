@@ -18,7 +18,7 @@ Dm = Dh.*integral(recip_Ez, 0, redshift);
 Da = Dm./(1 + redshift);
 
 %calculate angular size in radians
-theta = physical_distance./Da;
+theta = physical_distance./Da*(180/pi);
 
 end
 
