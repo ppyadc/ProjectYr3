@@ -1,4 +1,5 @@
-function cluster_catalog = catalog(cluster_matrix, likelihood_matrix, coord_x, coord_y, new_cell_lengthx, new_cell_lengthy)
+function cluster_catalog = catalog(cluster_matrix, likelihood_matrix, coord_x, coord_y,...
+    new_cell_lengthx, new_cell_lengthy)
 %function that  finds position and likelihood of clusters
 
 %finding the indecies of clusters in the grid
