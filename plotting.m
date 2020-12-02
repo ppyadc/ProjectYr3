@@ -1,5 +1,5 @@
 function plotting(grid_lengthx, grid_lengthy, nx, ny, no_gal, likelihood_matrix, ...
-    cluster_matrix, x, y, coord_x, coord_y)
+    cluster_matrix, filter_matrix, x, y, coord_x, coord_y)
 %function to produce a plot of the number of galaxies in each section of
 %the grid displayed as different colours
 
@@ -20,16 +20,20 @@ colormap winter;
 xlabel('RA');
 ylabel('DEC');
 
+
 %plot likelihood matrix
 figure;
-imagesc(x_arr, y_arr, likelihood_matrix);
+imagesc(x_arr, y_arr, likelihood_matrix, 'AlphaData',~isnan(likelihood_matrix));
 colorbar;
 xlabel('RA');
 ylabel('DEC');
 
+
+%removing enpty cells from the matrix
+cluster_matrix(filter_matrix) = NaN;
 %plot where galaxy clusters are
 figure;
-imagesc(x_arr, y_arr,cluster_matrix);
+imagesc(x_arr, y_arr, cluster_matrix, 'AlphaData',~isnan(cluster_matrix));
 colorbar;
 xlabel('RA');
 ylabel('DEC');
